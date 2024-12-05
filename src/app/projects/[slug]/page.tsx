@@ -1,16 +1,17 @@
 import Link from 'next/link'
 
-import { PROJECTS } from '@/data/projects'
 import { PAGE_REVALIDATE, StaticPageProps } from '@/models/common.model'
+import {
+    getAllProjects,
+    getProjectBySlug,
+} from '@/repositories/projects.repository'
 
 export const revalidate = PAGE_REVALIDATE
 
-async function getProject(slug: string) {
-    return PROJECTS.filter((project) => project.img === slug)[0]
-}
-
 export async function generateStaticParams() {
-    return PROJECTS.map((project) => ({
+    const projects = getAllProjects()
+
+    return projects.map((project) => ({
         slug: String(project.img),
     }))
 }
@@ -18,11 +19,11 @@ export async function generateStaticParams() {
 export default async function ProjectPage({ params }: StaticPageProps) {
     const { slug } = await params
 
-    const { name, description, github } = await getProject(slug)
+    const { name, description, github } = getProjectBySlug(slug)
 
     return (
         <>
-            <h1>{name}</h1>
+            <h1 className="page-title ">{name}</h1>
             <p>{description}</p>
             {github && (
                 <Link href={github} target={'_blank'} aria-label={name}>
