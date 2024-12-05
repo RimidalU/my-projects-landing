@@ -6,5 +6,10 @@ interface StaticPageProps {
     }
 }
 
-export { PAGE_REVALIDATE }
+enum ProjectListRouteTypes {
+    Projects = 'projects',
+    Filter = 'filter',
+}
+
+export { PAGE_REVALIDATE, ProjectListRouteTypes }
 export type { StaticPageProps }
