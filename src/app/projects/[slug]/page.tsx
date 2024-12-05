@@ -24,7 +24,7 @@ export default async function ProjectPage({ params }: StaticPageProps) {
 
     return (
         <>
-            <h1 className="page-title ">{name}</h1>
+            <h1 className="page-title">{name}</h1>
             <p>{description}</p>
             {github && (
                 <Link href={github} target={'_blank'} aria-label={name}>
