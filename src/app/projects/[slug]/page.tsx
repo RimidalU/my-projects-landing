@@ -19,7 +19,7 @@ export async function generateStaticParams() {
 export default async function ProjectPage({ params }: StaticPageProps) {
     const { slug } = await params
 
-    const { name, description, github } = getProjectBySlug(slug)
+    const { name, description, github, liveDemo } = getProjectBySlug(slug)
 
     return (
         <>
@@ -28,6 +28,11 @@ export default async function ProjectPage({ params }: StaticPageProps) {
             {github && (
                 <Link href={github} target={'_blank'} aria-label={name}>
                     Project on GitHab Link
+                </Link>
+            )}
+            {liveDemo && (
+                <Link href={liveDemo} target={'_blank'} aria-label={name}>
+                    Project live Demo Link
                 </Link>
             )}
         </>
