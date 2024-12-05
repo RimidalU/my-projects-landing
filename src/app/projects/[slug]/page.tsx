@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { use } from 'react'
 
 import { PROJECTS } from '@/data/projects'
 import { PAGE_REVALIDATE, StaticPageProps } from '@/models/common.model'
@@ -7,11 +6,19 @@ import { PAGE_REVALIDATE, StaticPageProps } from '@/models/common.model'
 export const revalidate = PAGE_REVALIDATE
 
 async function getProject(slug: string) {
-    return PROJECTS.filter((project) => (project.img = slug))[0]
+    return PROJECTS.filter((project) => project.img === slug)[0]
 }
 
-export default function ProjectPage({ params }: StaticPageProps) {
-    const { name, description, github } = use(getProject(params.slug))
+export async function generateStaticParams() {
+    return PROJECTS.map((project) => ({
+        slug: String(project.img),
+    }))
+}
+
+export default async function ProjectPage({ params }: StaticPageProps) {
+    const { slug } = await params
+
+    const { name, description, github } = await getProject(slug)
 
     return (
         <>
