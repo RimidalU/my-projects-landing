@@ -3,20 +3,15 @@ import { use } from 'react'
 
 import Footer from '@/components/Footer'
 import { PROJECTS } from '@/data/projects'
+import { PAGE_REVALIDATE, StaticPageProps } from '@/models/common.model'
 
-export const revalidate = 60
-
-interface ProjectProps {
-    params: {
-        slug: string
-    }
-}
+export const revalidate = PAGE_REVALIDATE
 
 async function getProject(slug: string) {
     return PROJECTS.filter((project) => (project.img = slug))[0]
 }
 
-export default function ProjectPage({ params }: ProjectProps) {
+export default function ProjectPage({ params }: StaticPageProps) {
     const { name, description, github } = use(getProject(params.slug))
 
     return (
