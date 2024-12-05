@@ -27,12 +27,22 @@ export default async function ProjectPage({ params }: StaticPageProps) {
             <h1 className="page-title">{name}</h1>
             <p>{description}</p>
             {github && (
-                <Link href={github} target={'_blank'} aria-label={name}>
+                <Link
+                    href={github}
+                    target={'_blank'}
+                    className="link"
+                    aria-label={name}
+                >
                     Project on GitHab Link
                 </Link>
             )}
             {liveDemo && (
-                <Link href={liveDemo} target={'_blank'} aria-label={name}>
+                <Link
+                    href={liveDemo}
+                    target={'_blank'}
+                    className="link"
+                    aria-label={name}
+                >
                     Project live Demo Link
                 </Link>
             )}

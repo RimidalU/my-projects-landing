@@ -5,13 +5,9 @@
 :root {
     --background: #ffffff;
     --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: #0a0a0a;
-        --foreground: #ededed;
-    }
+    --contrast: #1649B5;
+    --accent: #f3f4f6;
+    --active: #9ca3af;
 }
 
 body {
@@ -23,5 +19,14 @@ body {
 @layer utilities {
     .page-title {
         @apply font-bold text-center text-2xl md:text-3xl -tracking-tight;
+    }
+    .active-item {
+        @apply bg-accent rounded-md;
+    }
+    .active-item:hover {
+        @apply bg-active transition-colors duration-200 text-background;
+    }
+    .link:hover {
+        @apply transition-colors duration-200 text-contrast underline;
     }
 }
