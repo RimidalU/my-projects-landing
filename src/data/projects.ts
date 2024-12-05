@@ -1,0 +1,151 @@
+import { IProject } from '@/models/project.model'
+
+const PROJECTS: IProject[] = [
+    {
+        name: 'Short route on the map by points.',
+        description:
+            'SPA in React, RTK, Redux-saga, TypeScript and Ant-Design for display a short route on the map by points. Leaflet - interactive map shell. Maps - OpenStreetMap. Short path calculation - OSRM under the hood leaflet-routing-machine plugin.',
+        img: 'short-route-on-the-map-by-points',
+        github: 'https://github.com/RimidalU/short-route-on-the-map-by-points',
+        liveDemo: 'https://short-route-on-the-map-by-points.netlify.app/',
+        tools: [
+            'React',
+            'Leaflet',
+            'TypeScript',
+            'Redux',
+            'ReduxSaga',
+            'AntDesign',
+            'Yarn',
+            'Vite',
+        ],
+        status: 'in progress',
+    },
+    {
+        name: 'Book Swap. Nest server.',
+        description:
+            'Is a platform for exchanging books. App provides registered users with the opportunity to share books, add favorites to both books and users, and has a feed informing about new events from users from favorites. The functionality also includes registration, authorization of users, assignment tags and search by tags, downloading and storing avatars of user in the database, downloading and converting photos to webp with the inclusion of static distribution, the ability to add an electronic version of the book. And many, many other features...',
+        img: 'book-swap',
+        github: 'https://github.com/RimidalU/book-swap',
+        liveDemo: 'https://book-swap-0ph3.onrender.com/docs',
+        tools: [
+            'NestJs',
+            'jest',
+            'NodeJs',
+            'TypeScript',
+            'Swagger',
+            'TypeORM',
+            'PostgreSQL',
+            'Multer',
+            'Zod',
+            'Docker',
+            'Sharp',
+        ],
+        status: 'in progress',
+    },
+    {
+        name: 'Notes text editor with tags.',
+        description:
+            "SPA in React, TypeScript and Sass for quick notes. Create, edit, view and delete notes. While editing a note, user can create tags using the '#' symbol. When editing a note, all words that match the tags are highlighted.",
+        img: 'notes_text_editor_with_tags',
+        github: 'https://github.com/RimidalU/notes-text-editor_with-tags',
+        liveDemo: 'https://euphonious-heliotrope-5b2c49.netlify.app/',
+        tools: ['React', 'TypeScript', 'HTML', 'Sass', 'JSON', 'Yarn', 'Vite'],
+        status: 'in progress',
+    },
+    {
+        name: 'Budget Table.',
+        description: 'Table of construction and erection work for budget app.',
+        img: 'table_of_construction_and_erection_work',
+        github: 'https://github.com/RimidalU/table_of_construction_and_erection_work',
+        liveDemo:
+            'https://table-of-construction-and-erection-work-kdf7uyyt8-rimidalu.vercel.app/',
+        tools: [
+            'React',
+            'Redux',
+            'TypeScript',
+            'HTML',
+            'Sass',
+            'Ky',
+            'Yarn',
+            'Vite',
+        ],
+        status: 'in progress',
+    },
+    {
+        name: 'Simple photo gallery in HTML, CSS and JavaScript.',
+        description:
+            'A simple photo gallery with information about the photo, search by name and a random sequence of filling the gallery with photos.',
+        img: 'photo-gallery-js',
+        github: 'https://github.com/RimidalU/photo_gallery',
+        liveDemo: 'https://simple-photogallery.netlify.app/',
+        tools: ['HTML', 'CSS', 'JavaScript'],
+        status: 'in progress',
+    },
+    {
+        name: 'Excel to Word Converter.',
+        description:
+            'Converter from excel to word with intermediate state to json. Allows you to get data from an excel-file in the form required by the user using a custom template.',
+        img: 'excel-to-word_converter',
+        github: 'https://github.com/RimidalU/excel-to-word_converter',
+        liveDemo: 'https://excel-to-word-converter.netlify.app/',
+        tools: ['HTML', 'TypeScript', 'Sass', 'JSON', 'Yarn', 'Vite'],
+        status: 'in progress',
+    },
+    {
+        name: 'Contact-form in PHP and MySQL.',
+        description:
+            'PHP. A form that adds to the database with notification of messages by e-mail + a table that displays all messages in the database with pagination.',
+        img: 'php_contact_form',
+        github: 'https://github.com/RimidalU/php-contact_form',
+        liveDemo: 'http://php-contact-form.epizy.com/',
+        tools: ['PHP', 'HTML', 'Bootstrap', 'PHPMailer'],
+        status: 'in progress',
+    },
+    {
+        name: 'Travel Landing.',
+        description: "My family's travel landing page.",
+        img: 'travel_landing',
+        github: 'https://github.com/RimidalU/travel_landing',
+        liveDemo: 'https://spiffy-donut-4c3548.netlify.app/',
+        tools: ['JavaScript', 'HTML', 'Bootstrap'],
+        status: 'in progress',
+    },
+    {
+        name: 'React binary tree.',
+        description:
+            "Binary tree with random number generator. At the user's request, a new random value is embedded in the tree.",
+        img: 'react_binary_tree',
+        github: 'https://github.com/RimidalU/react_binary_tree',
+        liveDemo: 'https://react-binary-tree-k7vywh0ab-rimidalu.vercel.app/',
+        tools: ['React', 'TypeScript', 'HTML', 'CSS', 'D3Tree', 'Yarn', 'Vite'],
+        status: 'in progress',
+    },
+    {
+        name: 'Post table.',
+        description:
+            'SPA in React, RTK, Redux-saga, TypeScript and TailwindCSS for display a list of post. User can search, sort, filter posts. There is pagination.',
+        img: 'react-rtk-table-search-sort-filter-pagination',
+        github: 'https://github.com/RimidalU/react-rtk-table-search-sort-filter-pagination',
+        liveDemo: 'https://react-rtk-table.netlify.app/',
+        tools: [
+            'React',
+            'TypeScript',
+            'Redux',
+            'ReduxSaga',
+            'HTML',
+            'TailwindCSS',
+            'Vite',
+        ],
+        status: 'in progress',
+    },
+    {
+        name: 'Tik Tak Toe.',
+        description: 'Classic simple React tik tak toe for two users game.',
+        img: 'react-simple-tic-tac-toe',
+        github: 'https://github.com/RimidalU/react-simple-tic-tac-toe',
+        liveDemo: 'https://react-simple-tic-tac-toe.netlify.app/',
+        tools: ['React', 'TypeScript', 'HTML', 'TailwindCSS', 'Yarn', 'Vite'],
+        status: 'is done',
+    },
+]
+export { PROJECTS }
