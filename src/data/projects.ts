@@ -2,11 +2,11 @@ import { IProject } from '@/models/project.model'
 
 const PROJECTS: IProject[] = [
     {
-        name: 'Travels landing..',
+        name: 'Travels landing.',
         description:
             'The site contains information about my travels, links to videos about these trips and technical reports.',
         img: 'my-travels-landing',
-        github: 'https://github.com/RimidalU/my-travels-landing',
+        github: 'https://github.com/RimidalU/my-travels-landing-',
         liveDemo: 'https://my-travels-landing.vercel.app/',
         tools: [
             'Next',
