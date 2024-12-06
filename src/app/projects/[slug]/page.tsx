@@ -26,32 +26,40 @@ export default async function ProjectPage({ params }: StaticPageProps) {
         <>
             <h1 className="page-title">{name}</h1>
             <p>{description}</p>
-            {github && (
-                <Link
-                    href={github}
-                    target={'_blank'}
-                    className="link"
-                    aria-label={name}
-                >
-                    📎 Project on GitHab
-                </Link>
-            )}
-            {liveDemo && (
-                <Link
-                    href={liveDemo}
-                    target={'_blank'}
-                    className="link"
-                    aria-label={name}
-                >
-                    📽️ Project live Demo
-                </Link>
-            )}
+
+            <article className="flex flex-col">
+                <h2>Links:</h2>
+                {github && (
+                    <Link
+                        href={github}
+                        target={'_blank'}
+                        className="link"
+                        aria-label={name}
+                    >
+                        📎 Project on GitHab
+                    </Link>
+                )}
+                {liveDemo && (
+                    <Link
+                        href={liveDemo}
+                        target={'_blank'}
+                        className="link"
+                        aria-label={name}
+                    >
+                        📽️ Project live Demo
+                    </Link>
+                )}
+            </article>
+
             {tools && (
-                <ul>
-                    {tools.map((tool) => (
-                        <li key={tool}>{`🛠️ ${tool}`}</li>
-                    ))}
-                </ul>
+                <article>
+                    <h2>Tools Used:</h2>
+                    <ul>
+                        {tools.map((tool) => (
+                            <li key={tool}>{`🛠️ ${tool}`}</li>
+                        ))}
+                    </ul>
+                </article>
             )}
         </>
     )
