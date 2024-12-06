@@ -3,9 +3,9 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 
 import './globals.css'
-import Link from 'next/link'
 
 import Footer from '@/components/Footer'
+import Header from '@/components/Header'
 
 const geistSans = localFont({
     src: './fonts/GeistVF.woff',
@@ -34,22 +34,7 @@ export default function RootLayout({
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
                 <div className="items-center justify-items-center min-h-screen pb-20 gap-16">
-                    <header className="fixed top-0 w-full pt-5 overflow-hidden text-center backdrop-blur-[6px] flex justify-around">
-                        <Link href={'/'} className="link">
-                            ↩️ To Home
-                        </Link>
-                        <Link
-                            href={
-                                '/developer/Uladzimir_Stankevich_Back-End_Developer_Resume.pdf'
-                            }
-                            className="link"
-                            target="_blank"
-                            aria-label="Download CV"
-                        >
-                            Download CV 🪪
-                        </Link>
-                    </header>
-
+                    <Header />
                     <main className="flex flex-col gap-8 items-center sm:items-start p-16 sm:p-20">
                         {children}
                     </main>
