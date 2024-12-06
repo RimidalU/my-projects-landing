@@ -4,7 +4,7 @@
 
 > The site contains information about my projects, links to git hab and live demo.
 
-[![Link to My projects](https://img.shields.io/badge/Visit_My_Projects_Landing-Click_Here-black?style=plastic&logo=link&logoColor=black&labelColor=9ca3af&color=1649B5&link=https://my-travels-landing.vercel.app/)](https://my-travels-landing.vercel.app/)
+[![Link to My projects](https://img.shields.io/badge/Visit_My_Projects_Landing-Click_Here-black?style=plastic&logo=link&logoColor=black&labelColor=9ca3af&color=1649B5&link=https://my-projects-ten-delta.vercel.app)](https://my-projects-ten-delta.vercel.app)
 
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![React](https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=black)
@@ -68,7 +68,7 @@ Stack: Next, TypeScript, TailwindCSS.
 
 ## How To Use
 
-Run [Live Demo](https://my-travels-landing.vercel.app/)
+Run [Live Demo](https://my-projects-ten-delta.vercel.app)
 
 ## Project Status
 
