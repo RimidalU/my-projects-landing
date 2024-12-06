@@ -1,8 +1,4 @@
-interface StaticPageProps {
-    params: {
-        slug: string
-    }
-}
+type StaticPagePropsParams = Promise<{ slug: string }>
 
 enum ProjectListRouteTypes {
     Projects = 'projects',
@@ -10,4 +6,4 @@ enum ProjectListRouteTypes {
 }
 
 export { ProjectListRouteTypes }
-export type { StaticPageProps }
+export type { StaticPagePropsParams }
