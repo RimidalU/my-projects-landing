@@ -27,7 +27,7 @@
 [License](#license) •
 [Contact](#contact)
 
-<img src="./assets/home.png" width="400" /> <img src="./assets/project.png" width="400" />
+<img src="./assets/home.png" width="400" /> <img src="./assets/project.png" width="400" /> <img src="./assets/isr.png" width="400" />
 
 ## Description
 
@@ -39,9 +39,9 @@ Stack: Next, TypeScript, TailwindCSS.
 
 ## Project setup
 
--   Clone this repo to your desktop and run `npm install` to install all the dependencies.
--   Once the dependencies are installed, you can run `npm dev` to start the application.
--   Enjoy.
+- Clone this repo to your desktop and run `npm install` to install all the dependencies.
+- Once the dependencies are installed, you can run `npm dev` to start the application.
+- Enjoy.
 
 ### Project structure
 
@@ -63,8 +63,8 @@ Stack: Next, TypeScript, TailwindCSS.
 
 ## Features
 
--   next ISR for static pages
--   `husky` and hooks (lint in *pre-commit*, check commit message);
+- next ISR for static pages
+- `husky` and hooks (lint in _pre-commit_, check commit message);
 
 ## How To Use
 
@@ -78,18 +78,18 @@ Project is: _in progress_
 
 To do:
 
--   [ ] Add content.
--   [ ] Add translations
--   [ ] Add project structure to readme file
--   [ ] Add tools filter
--   [ ] Add three.js
--   [ ] Add tests
--   [ ] ...
+- [ ] Add content.
+- [ ] Add translations
+- [ ] Add project structure to readme file
+- [ ] Add tools filter
+- [ ] Add three.js
+- [ ] Add tests
+- [ ] ...
 
 Improvement:
 
--   [ ] change project layout
--   [ ] ...
+- [ ] change project layout
+- [ ] ...
 
 ## License
 
