@@ -1,4 +1,5 @@
 import ProjectLinks from '@/components/ProjectLinks'
+import ProjectTools from '@/components/ProjectTools'
 import { PAGE_REVALIDATE, StaticPageProps } from '@/models/common.model'
 import {
     getAllProjects,
@@ -28,16 +29,7 @@ export default async function ProjectPage({ params }: StaticPageProps) {
 
             <ProjectLinks github={github} liveDemo={liveDemo} />
 
-            {tools && (
-                <article>
-                    <h2>Tools Used:</h2>
-                    <ul>
-                        {tools.map((tool) => (
-                            <li key={tool}>{`🛠️ ${tool}`}</li>
-                        ))}
-                    </ul>
-                </article>
-            )}
+            {tools && <ProjectTools tools={tools} />}
         </>
     )
 }
