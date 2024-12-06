@@ -1,5 +1,4 @@
-import Link from 'next/link'
-
+import ProjectLinks from '@/components/ProjectLinks'
 import { PAGE_REVALIDATE, StaticPageProps } from '@/models/common.model'
 import {
     getAllProjects,
@@ -27,29 +26,7 @@ export default async function ProjectPage({ params }: StaticPageProps) {
             <h1 className="page-title">{name}</h1>
             <p>{description}</p>
 
-            <article className="flex flex-col">
-                <h2>Links:</h2>
-                {github && (
-                    <Link
-                        href={github}
-                        target={'_blank'}
-                        className="link"
-                        aria-label={name}
-                    >
-                        📎 Project on GitHab
-                    </Link>
-                )}
-                {liveDemo && (
-                    <Link
-                        href={liveDemo}
-                        target={'_blank'}
-                        className="link"
-                        aria-label={name}
-                    >
-                        📽️ Project live Demo
-                    </Link>
-                )}
-            </article>
+            <ProjectLinks github={github} liveDemo={liveDemo} />
 
             {tools && (
                 <article>
