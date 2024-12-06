@@ -26,7 +26,10 @@ body {
     .active-item:hover {
         @apply bg-active transition-colors duration-200 text-background;
     }
+    .link {
+        @apply text-contrast;
+    }
     .link:hover {
-        @apply transition-colors duration-200 text-contrast underline;
+        @apply transition-colors duration-200 text-active underline;
     }
 }
