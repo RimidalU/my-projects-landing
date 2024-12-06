@@ -21,7 +21,7 @@ function Header() {
                 target="_blank"
                 aria-label="Download CV"
             >
-                Download CV 🪪
+                Download My CV 🪪
             </Link>
         </header>
     )
