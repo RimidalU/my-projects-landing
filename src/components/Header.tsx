@@ -15,7 +15,7 @@ function Header() {
             )}
             <Link
                 href={
-                    '/developer/Uladzimir_Stankevich_Back-End_Developer_Resume.pdf'
+                    '/developer/Uladzimir_Stankevich_Full-Stack_Developer_Resume.pdf'
                 }
                 className="link"
                 target="_blank"
