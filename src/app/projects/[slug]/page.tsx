@@ -33,7 +33,7 @@ export default async function ProjectPage({ params }: StaticPageProps) {
                     className="link"
                     aria-label={name}
                 >
-                    Project on GitHab Link
+                    📎 Project on GitHab
                 </Link>
             )}
             {liveDemo && (
@@ -43,13 +43,13 @@ export default async function ProjectPage({ params }: StaticPageProps) {
                     className="link"
                     aria-label={name}
                 >
-                    Project live Demo Link
+                    📽️ Project live Demo
                 </Link>
             )}
             {tools && (
                 <ul>
                     {tools.map((tool) => (
-                        <li key={tool}>{tool}</li>
+                        <li key={tool}>{`🛠️ ${tool}`}</li>
                     ))}
                 </ul>
             )}

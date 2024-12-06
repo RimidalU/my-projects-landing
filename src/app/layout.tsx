@@ -36,11 +36,11 @@ export default function RootLayout({
                 <div className="items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
                     <header className="fixed top-0 w-full pt-5 overflow-hidden text-center backdrop-blur-[6px]">
                         <Link href={'/'} className="link">
-                            To Home
+                            ↩️ To Home
                         </Link>
                     </header>
 
-                    <main className="flex flex-col gap-8 items-center sm:items-start">
+                    <main className="flex flex-col pt-5 gap-8 items-center sm:items-start">
                         {children}
                     </main>
                     <Footer />
