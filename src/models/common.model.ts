@@ -1,5 +1,3 @@
-const PAGE_REVALIDATE = 60 // Per seconds
-
 interface StaticPageProps {
     params: {
         slug: string
@@ -11,5 +9,5 @@ enum ProjectListRouteTypes {
     Filter = 'filter',
 }
 
-export { PAGE_REVALIDATE, ProjectListRouteTypes }
+export { ProjectListRouteTypes }
 export type { StaticPageProps }

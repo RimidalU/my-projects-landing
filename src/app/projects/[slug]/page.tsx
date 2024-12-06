@@ -1,12 +1,12 @@
 import ProjectLinks from '@/components/ProjectLinks'
 import ProjectTools from '@/components/ProjectTools'
-import { PAGE_REVALIDATE, StaticPageProps } from '@/models/common.model'
+import { StaticPageProps } from '@/models/common.model'
 import {
     getAllProjects,
     getProjectBySlug,
 } from '@/repositories/projects.repository'
 
-export const revalidate = PAGE_REVALIDATE
+export const revalidate = 60
 
 export async function generateStaticParams() {
     const projects = getAllProjects()
