@@ -1,18 +1,21 @@
 import Link from 'next/link'
 import React from 'react'
 
-interface IProjectLinksProps {
-    github: string
+import { getGitHabRepositoryUrl } from '@/utils/path.utils'
+
+interface IProjectLinksListProps {
+    slug: string
     liveDemo: string
 }
 
-// TODO: Change to ProjectLinksList
-function ProjectLinks({ github, liveDemo }: IProjectLinksProps) {
+function ProjectLinksList({ slug, liveDemo }: IProjectLinksListProps) {
+    const url = getGitHabRepositoryUrl(slug)
+
     return (
         <article className="flex flex-col">
             <h2>Links:</h2>
-            {github && (
-                <Link href={github} target={'_blank'} className="link">
+            {slug && (
+                <Link href={url} target={'_blank'} className="link">
                     📎 Project on GitHab
                 </Link>
             )}
@@ -25,4 +28,4 @@ function ProjectLinks({ github, liveDemo }: IProjectLinksProps) {
     )
 }
 
-export default ProjectLinks
+export default ProjectLinksList

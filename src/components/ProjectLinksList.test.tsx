@@ -2,36 +2,34 @@ import '@testing-library/jest-dom'
 
 import { render, screen } from '@testing-library/react'
 
-import ProjectLinks from './ProjectLinks'
+import { getGitHabRepositoryUrl } from '@/utils/path.utils'
 
-const mockGithubLink: string = 'mockGithubLink'
+import ProjectLinksList from './ProjectLinksList'
+
+const mockSlug: string = 'mockSlug'
+const mockGitHabUrl: string = getGitHabRepositoryUrl('mockSlug')
+
 const mockLiveDemoLink: string = 'mockLiveDemoLink'
 
-describe('ProjectLinks', () => {
+describe('ProjectLinksList', () => {
     it('renders the project links title', () => {
-        render(
-            <ProjectLinks github={mockGithubLink} liveDemo={mockLiveDemoLink} />
-        )
+        render(<ProjectLinksList slug={mockSlug} liveDemo={mockLiveDemoLink} />)
 
         const titleElement = screen.getByText('Links:')
         expect(titleElement).toBeInTheDocument()
     })
 
     it('has the correct link to GitHub', () => {
-        render(
-            <ProjectLinks github={mockGithubLink} liveDemo={mockLiveDemoLink} />
-        )
+        render(<ProjectLinksList slug={mockSlug} liveDemo={mockLiveDemoLink} />)
         const linkElement = screen.getByRole('link', {
             name: /📎 Project on GitHab/i,
         })
-        expect(linkElement).toHaveAttribute('href', mockGithubLink)
+        expect(linkElement).toHaveAttribute('href', mockGitHabUrl)
         expect(linkElement).toHaveAttribute('target', '_blank')
     })
 
     it('has the correct link to live demo app', () => {
-        render(
-            <ProjectLinks github={mockGithubLink} liveDemo={mockLiveDemoLink} />
-        )
+        render(<ProjectLinksList slug={mockSlug} liveDemo={mockLiveDemoLink} />)
         const linkElement = screen.getByRole('link', {
             name: /📽️ Project live Demo/i,
         })
@@ -40,9 +38,7 @@ describe('ProjectLinks', () => {
     })
 
     it('article has the correct CSS classes', () => {
-        render(
-            <ProjectLinks github={mockGithubLink} liveDemo={mockLiveDemoLink} />
-        )
+        render(<ProjectLinksList slug={mockSlug} liveDemo={mockLiveDemoLink} />)
         const footerElement = screen.getByRole('article')
         expect(footerElement).toHaveClass('flex flex-col')
     })
