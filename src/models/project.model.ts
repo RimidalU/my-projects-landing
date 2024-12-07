@@ -1,12 +1,14 @@
+import { ProjectTool } from './projectTool.model'
+
+type ProjectStatus = 'in progress' | 'completed'
+
 interface IProject {
     name: string
     description: string
-    img: string
-    github: string
+    slug: string
     liveDemo: string
-    tools: string[]
-    //TODO: change  'is done' to 'completed'
-    status: 'in progress' | 'is done'
+    tools: ProjectTool[]
+    status: ProjectStatus
 }
 
 export type { IProject }
