@@ -17,7 +17,7 @@ describe('projectsRepository', () => {
     describe('getProjectBySlug', () => {
         it('should return the correct project for a valid slug', () => {
             const project = projectsRepository.getProjectBySlug(
-                mockProjectList[0].img
+                mockProjectList[0].slug
             )
             expect(project).toEqual(mockProjectList[0])
         })
