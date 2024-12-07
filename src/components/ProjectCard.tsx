@@ -14,7 +14,7 @@ function ProjectCard({ project, route, className }: IProjectCardProps) {
     return (
         <li>
             <Link
-                href={`/${route}/${project.img}`}
+                href={`/${route}/${project.slug}`}
                 className={clsx(
                     'block border-2 px-5 py-1 active-item',
                     className

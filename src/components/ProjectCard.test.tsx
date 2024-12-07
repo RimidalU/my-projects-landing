@@ -33,7 +33,7 @@ describe('ProjectCard', () => {
         expect(linkElement).toHaveRole('link')
         expect(linkElement).toHaveAttribute(
             'href',
-            `/${mockRoute}/${mockProjectList[0].img}`
+            `/${mockRoute}/${mockProjectList[0].slug}`
         )
         expect(linkElement).toHaveAttribute(
             'aria-label',
