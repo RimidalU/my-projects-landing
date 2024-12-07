@@ -20,7 +20,17 @@ module.exports = {
         'type-enum': [
             RuleConfigSeverity.Error,
             'always',
-            ['feat', 'fix', 'refactor', 'chore', 'docs', 'lib', 'ci', 'style'],
+            [
+                'feat',
+                'fix',
+                'refactor',
+                'chore',
+                'docs',
+                'lib',
+                'ci',
+                'style',
+                'tests',
+            ],
         ],
     },
 }
