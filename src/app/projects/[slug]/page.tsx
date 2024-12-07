@@ -1,15 +1,12 @@
 import ProjectLinks from '@/components/ProjectLinks'
 import ProjectTools from '@/components/ProjectTools'
 import { StaticPagePropsParams } from '@/models/common.model'
-import {
-    getAllProjects,
-    getProjectBySlug,
-} from '@/repositories/projects.repository'
+import { projectsRepository } from '@/repositories/projects.repository'
 
 export const revalidate = 60
 
 export async function generateStaticParams() {
-    const projects = getAllProjects()
+    const projects = projectsRepository.getAllProjects()
 
     return projects.map((project) => ({
         slug: String(project.img),
@@ -24,7 +21,7 @@ export default async function ProjectPage({
     const { slug } = await params
 
     const { name, description, github, liveDemo, tools } =
-        getProjectBySlug(slug)
+        projectsRepository.getProjectBySlug(slug)
 
     return (
         <>
