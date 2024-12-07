@@ -37,6 +37,7 @@ describe('Header', () => {
         render(<Header />)
         const linkElement = screen.getByText('Download My CV 🪪')
 
+        expect(linkElement).toHaveRole('link')
         expect(linkElement).toHaveAttribute(
             'href',
             '/developer/Uladzimir_Stankevich_Full-Stack_Developer_Resume.pdf'
