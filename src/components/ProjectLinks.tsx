@@ -5,6 +5,8 @@ interface IProjectLinksProps {
     github: string
     liveDemo: string
 }
+
+// TODO: Change to ProjectLinksList
 function ProjectLinks({ github, liveDemo }: IProjectLinksProps) {
     return (
         <article className="flex flex-col">
