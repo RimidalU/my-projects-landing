@@ -1,9 +1,9 @@
-import { getAllProjects } from '@/repositories/projects.repository'
 import ProjectList from '@/components/ProjectList'
 import { ProjectListRouteTypes } from '@/models/common.model'
+import { projectsRepository } from '@/repositories/projects.repository'
 
 export default function HomePage() {
-    const projects = getAllProjects()
+    const projects = projectsRepository.getAllProjects()
 
     return (
         <>

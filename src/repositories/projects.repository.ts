@@ -1,7 +1,15 @@
 import { PROJECTS } from '@/data/projects'
+import { IProject } from '@/models/project.model'
 
-const getAllProjects = () => PROJECTS
-const getProjectBySlug = (slug: string) =>
-    PROJECTS.filter((project) => project.img === slug)[0]
+const createProjectRepository = (projects: IProject[]) => {
+    const getAllProjects = () => projects
 
-export { getAllProjects, getProjectBySlug }
+    const getProjectBySlug = (slug: string) =>
+        projects.filter((project) => project.img === slug)[0]
+
+    return { getAllProjects, getProjectBySlug }
+}
+
+const projectsRepository = createProjectRepository(PROJECTS)
+
+export { projectsRepository }
