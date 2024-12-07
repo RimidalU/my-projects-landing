@@ -5,7 +5,7 @@ const createProjectRepository = (projects: IProject[]) => {
     const getAllProjects = () => projects
 
     const getProjectBySlug = (slug: string) =>
-        projects.filter((project) => project.img === slug)[0]
+        projects.filter((project) => project.slug === slug)[0]
 
     return { getAllProjects, getProjectBySlug }
 }
