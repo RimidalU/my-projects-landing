@@ -5,6 +5,7 @@ interface IProject {
     github: string
     liveDemo: string
     tools: string[]
+    //TODO: change  'is done' to 'completed'
     status: 'in progress' | 'is done'
 }
 
