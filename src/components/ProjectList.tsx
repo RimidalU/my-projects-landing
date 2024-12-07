@@ -16,7 +16,7 @@ function ProjectList({ projects, route, className }: IProjectProps) {
                 <ProjectCard
                     project={project}
                     route={route}
-                    key={project.img}
+                    key={project.slug}
                 />
             ))}
         </ul>
