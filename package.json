@@ -1,6 +1,8 @@
 {
     "name": "slmax-meow-react-testovoe-zadanie",
     "version": "0.1.0",
+    "author": "rimidalu",
+    "description": "",
     "private": true,
     "scripts": {
         "dev": "next dev --turbopack",
