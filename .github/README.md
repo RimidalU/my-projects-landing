@@ -70,7 +70,7 @@ Stack: Next, TypeScript, TailwindCSS.
 
 Run [Live Demo](https://my-projects-ten-delta.vercel.app)
 
-<img src="./assets/demo.webp" style="display: block; margin: 0 auto;" width="50%" />
+![tutorial][tutorial]
 
 ## Project Status
 
@@ -102,3 +102,7 @@ This project is open source and available under the [BSD 3-Clause](../LICENSE.md
 Created by [@RimidalU](https://www.linkedin.com/in/uladzimir-stankevich/) - feel free to contact me!
 
 <p align="right"><a href="#start"><img width="45rem" src="./assets/pageUp.svg"></a></p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+
+[tutorial]: ./assets/demo.webp
