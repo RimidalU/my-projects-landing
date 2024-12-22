@@ -70,6 +70,8 @@ Stack: Next, TypeScript, TailwindCSS.
 
 Run [Live Demo](https://my-projects-ten-delta.vercel.app)
 
+<img src="./assets/demo.webp" style="display: block; margin: 0 auto;" width="50%" />
+
 ## Project Status
 
 Project is: _in progress_
