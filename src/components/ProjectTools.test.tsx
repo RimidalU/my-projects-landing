@@ -10,7 +10,7 @@ describe('ProjectTools', () => {
     it('renders the tools list title', () => {
         render(<ProjectTools tools={mockTools} />)
 
-        const titleElement = screen.getByText('Tools Used:')
+        const titleElement = screen.getByText('🛠️ Tools Used:')
         expect(titleElement).toBeInTheDocument()
     })
 
@@ -18,7 +18,7 @@ describe('ProjectTools', () => {
         render(<ProjectTools tools={mockTools} />)
 
         mockTools.forEach((tool) => {
-            expect(screen.getByText(`🛠️ ${tool}`)).toBeInTheDocument()
+            expect(screen.getByText(`${tool}`)).toBeInTheDocument()
         })
     })
 
