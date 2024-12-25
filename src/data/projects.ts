@@ -3,6 +3,23 @@ import { ProjectTool } from '@/models/projectTool.model'
 
 const PROJECTS: IProject[] = [
     {
+        name: 'QuickCode.',
+        description:
+            'Compact and intuitive code editor designed for developers who value simplicity and efficiency..',
+        slug: 'QuickCode',
+        liveDemo: 'https://quick-code-beta.vercel.app/',
+        tools: [
+            ProjectTool.Next,
+            ProjectTool.React,
+            ProjectTool.TypeScript,
+            ProjectTool.HTML,
+            ProjectTool.TailwindCSS,
+            ProjectTool.ThreeJS,
+        ],
+        status: 'in progress',
+    },
+
+    {
         name: 'Travels landing.',
         description:
             'The site contains information about my travels, links to videos about these trips and technical reports.',
