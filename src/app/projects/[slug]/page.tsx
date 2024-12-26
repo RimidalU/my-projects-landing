@@ -5,6 +5,8 @@ import ProjectLinksList from '@/components/ProjectLinksList'
 import ProjectTools from '@/components/ProjectTools'
 import { StaticPagePropsParams } from '@/models/common.model'
 import { projectsRepository } from '@/repositories/projects.repository'
+import { getProjectInterfaceTourVideoUrl } from '@/utils/path.utils'
+import CustomImage from '@/components/CustomImage'
 
 export const revalidate = 60
 
@@ -37,8 +39,15 @@ export default async function ProjectPage({
                     className
                 )}
             >
-                <ArticleLayout className="col-span-full xl:col-span-7 row-span-2  flex-col">
+                <ArticleLayout className="col-span-full xl:col-span-7 row-span-2 flex-col">
                     <p>Project interface tour</p>
+                    <CustomImage
+                        src={getProjectInterfaceTourVideoUrl(slug)}
+                        alt="Description of image"
+                        className="w-full"
+                        width={800}
+                        height={600}
+                    />
                 </ArticleLayout>
 
                 <ArticleLayout className="col-span-full xl:col-span-5 flex-col">
