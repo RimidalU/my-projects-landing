@@ -8,6 +8,7 @@
     --contrast: #1649B5;
     --accent: #f3f4f6;
     --active: #9ca3af;
+    --link: #A68549
 }
 
 body {
@@ -23,13 +24,13 @@ body {
     .active-item {
         @apply bg-accent rounded-md;
     }
-    .active-item:hover {
+    .active-hover {
         @apply bg-active transition-colors duration-200 text-background;
     }
     .link {
         @apply text-contrast;
     }
     .link:hover {
-        @apply transition-colors duration-200 text-active underline;
+        @apply transition-colors duration-200 text-link underline;
     }
 }

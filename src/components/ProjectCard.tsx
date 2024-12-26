@@ -16,7 +16,7 @@ function ProjectCard({ project, route, className }: IProjectCardProps) {
             <Link
                 href={`/${route}/${project.slug}`}
                 className={clsx(
-                    'block border-2 px-5 py-1 active-item',
+                    'block border-2 px-5 py-1 active-item hover:active-hover',
                     className
                 )}
                 aria-label={`View details of project: ${project.name}`}

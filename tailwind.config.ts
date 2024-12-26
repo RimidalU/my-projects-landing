@@ -14,6 +14,7 @@ export default {
                 accent: 'var(--accent)',
                 active: 'var(--active)',
                 contrast: 'var(--contrast)',
+                link: 'var(--link)',
             },
         },
     },

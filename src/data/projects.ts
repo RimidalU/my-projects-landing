@@ -5,7 +5,7 @@ const PROJECTS: IProject[] = [
     {
         name: 'QuickCode.',
         description:
-            'Compact and intuitive code editor designed for developers who value simplicity and efficiency..',
+            'Compact and intuitive code editor designed for developers who value simplicity and efficiency.',
         slug: 'QuickCode',
         liveDemo: 'https://quick-code-beta.vercel.app/',
         tools: [
@@ -16,7 +16,7 @@ const PROJECTS: IProject[] = [
             ProjectTool.TailwindCSS,
             ProjectTool.ThreeJS,
         ],
-        status: 'in progress',
+        status: 'completed',
     },
 
     {
