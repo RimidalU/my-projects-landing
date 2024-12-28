@@ -14,8 +14,9 @@ const PROJECTS: IProject[] = [
             ProjectTool.TypeScript,
             ProjectTool.HTML,
             ProjectTool.TailwindCSS,
-            ProjectTool.ThreeJS,
+            ProjectTool.MonacoEditor,
         ],
+        mainTools: [ProjectTool.Next, ProjectTool.MonacoEditor],
         status: 'completed',
     },
 
@@ -40,6 +41,11 @@ const PROJECTS: IProject[] = [
             ProjectTool.Jest,
             ProjectTool.OpenAI,
         ],
+        mainTools: [
+            ProjectTool.Next,
+            ProjectTool.ThreeJS,
+            ProjectTool.Contentlayer,
+        ],
         status: 'in progress',
     },
     {
@@ -55,6 +61,7 @@ const PROJECTS: IProject[] = [
             ProjectTool.Yarn,
             ProjectTool.Vite,
         ],
+        mainTools: [ProjectTool.React],
         status: 'in progress',
     },
     {
@@ -76,6 +83,12 @@ const PROJECTS: IProject[] = [
             ProjectTool.Docker,
             ProjectTool.Sharp,
         ],
+        mainTools: [
+            ProjectTool.NestJs,
+            ProjectTool.PostgreSQL,
+            ProjectTool.Sharp,
+            ProjectTool.Multer,
+        ],
         status: 'in progress',
     },
     {
@@ -93,6 +106,7 @@ const PROJECTS: IProject[] = [
             ProjectTool.Yarn,
             ProjectTool.Vite,
         ],
+        mainTools: [ProjectTool.React],
         status: 'in progress',
     },
     {
@@ -111,6 +125,7 @@ const PROJECTS: IProject[] = [
             ProjectTool.Yarn,
             ProjectTool.Vite,
         ],
+        mainTools: [ProjectTool.React, ProjectTool.Redux],
         status: 'in progress',
     },
     {
@@ -129,6 +144,7 @@ const PROJECTS: IProject[] = [
             ProjectTool.Yarn,
             ProjectTool.Vite,
         ],
+        mainTools: [ProjectTool.React, ProjectTool.Redux],
         status: 'in progress',
     },
     {
@@ -138,6 +154,7 @@ const PROJECTS: IProject[] = [
         slug: 'photo_gallery',
         liveDemo: 'https://simple-photogallery.netlify.app/',
         tools: [ProjectTool.HTML, ProjectTool.CSS, ProjectTool.JavaScript],
+        mainTools: [ProjectTool.HTML, ProjectTool.JavaScript],
         status: 'in progress',
     },
     {
@@ -153,6 +170,12 @@ const PROJECTS: IProject[] = [
             ProjectTool.JSON,
             ProjectTool.Yarn,
             ProjectTool.Vite,
+            ProjectTool.DocxTemplater,
+        ],
+        mainTools: [
+            ProjectTool.HTML,
+            ProjectTool.TypeScript,
+            ProjectTool.DocxTemplater,
         ],
         status: 'in progress',
     },
@@ -168,6 +191,11 @@ const PROJECTS: IProject[] = [
             ProjectTool.Bootstrap,
             ProjectTool.PHPMailer,
         ],
+        mainTools: [
+            ProjectTool.PHP,
+            ProjectTool.Bootstrap,
+            ProjectTool.PHPMailer,
+        ],
         status: 'in progress',
     },
     {
@@ -180,6 +208,7 @@ const PROJECTS: IProject[] = [
             ProjectTool.HTML,
             ProjectTool.Bootstrap,
         ],
+        mainTools: [ProjectTool.JavaScript, ProjectTool.Bootstrap],
         status: 'in progress',
     },
     {
@@ -197,6 +226,7 @@ const PROJECTS: IProject[] = [
             ProjectTool.Yarn,
             ProjectTool.Vite,
         ],
+        mainTools: [ProjectTool.React, ProjectTool.ReactD3Tree],
         status: 'in progress',
     },
     {
@@ -212,6 +242,11 @@ const PROJECTS: IProject[] = [
             ProjectTool.ReduxSaga,
             ProjectTool.HTML,
             ProjectTool.Vite,
+        ],
+        mainTools: [
+            ProjectTool.React,
+            ProjectTool.Redux,
+            ProjectTool.ReduxSaga,
         ],
         status: 'in progress',
     },

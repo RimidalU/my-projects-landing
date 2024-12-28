@@ -8,6 +8,7 @@ const mockProjectList: IProject[] = [
         slug: 'example-project',
         liveDemo: 'https://example-project.com',
         tools: [ProjectTool.React, ProjectTool.TypeScript],
+        mainTools: [ProjectTool.React],
         status: 'in progress',
     },
     {
@@ -16,6 +17,7 @@ const mockProjectList: IProject[] = [
         slug: 'new-project',
         liveDemo: 'https://new-project.com',
         tools: [ProjectTool.Leaflet, ProjectTool.Jest],
+        mainTools: [ProjectTool.React],
         status: 'completed',
     },
 ]
