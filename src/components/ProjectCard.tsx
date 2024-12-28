@@ -4,7 +4,7 @@ import clsx from 'clsx'
 
 import { IProject } from '@/models/project.model'
 
-import MaineProjectTools from './MaineProjectTools'
+import MainProjectTools from './MainProjectTools'
 
 interface IProjectCardProps {
     project: IProject
@@ -23,7 +23,7 @@ function ProjectCard({ project, route, className }: IProjectCardProps) {
                 )}
                 aria-label={`View details of project: ${project.name}`}
             >
-                <MaineProjectTools maineTools={project.mainTools} />
+                <MainProjectTools mainTools={project.mainTools} />
                 {project.name}
             </Link>
         </li>
