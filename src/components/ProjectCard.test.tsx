@@ -40,7 +40,7 @@ describe('ProjectCard', () => {
             `View details of project: ${mockProjectList[0].name}`
         )
         expect(linkElement).toHaveClass(
-            `block border-2 px-5 py-1 active-item ${mockClassName}`
+            `flex border-2 px-5 py-1 gap-5 items-center active-item ${mockClassName}`
         )
     })
 })
