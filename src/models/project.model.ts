@@ -8,6 +8,7 @@ interface IProject {
     slug: string
     liveDemo: string
     tools: ProjectTool[]
+    mainTools: ProjectTool[]
     status: ProjectStatus
 }
 
