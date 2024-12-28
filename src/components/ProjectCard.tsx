@@ -4,6 +4,8 @@ import clsx from 'clsx'
 
 import { IProject } from '@/models/project.model'
 
+import MaineProjectTools from './MaineProjectTools'
+
 interface IProjectCardProps {
     project: IProject
     route: string
@@ -16,11 +18,12 @@ function ProjectCard({ project, route, className }: IProjectCardProps) {
             <Link
                 href={`/${route}/${project.slug}`}
                 className={clsx(
-                    'block border-2 px-5 py-1 active-item hover:active-hover',
+                    'flex border-2 px-5 py-1 gap-5 items-center active-item hover:active-hover',
                     className
                 )}
                 aria-label={`View details of project: ${project.name}`}
             >
+                <MaineProjectTools maineTools={project.mainTools} />
                 {project.name}
             </Link>
         </li>
