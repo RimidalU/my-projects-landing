@@ -36,6 +36,7 @@ enum ProjectTool {
     PHP = 'php',
     PHPMailer = 'phpmailer',
     ReactD3Tree = 'react-d3-tree',
+    MonacoEditor = 'MonacoEditor',
 
     // RTK= 'rtk-query',
     // Axios= 'axios',
