@@ -31,9 +31,13 @@ describe('ProjectList', () => {
             />
         )
 
-        const list = screen.getByRole('list')
+        const lists = screen.getAllByRole('list')
 
-        expect(list).toBeInTheDocument()
+        expect(lists.length).toBe(3)
+
+        lists.forEach((list) => {
+            expect(list).toBeInTheDocument()
+        })
 
         expect(screen.getByText('Example Project')).toBeInTheDocument()
         expect(screen.getByText('New Project')).toBeInTheDocument()
@@ -47,7 +51,7 @@ describe('ProjectList', () => {
                 className={mockClassName}
             />
         )
-        const list = screen.getByRole('list')
-        expect(list).toHaveClass(`flex flex-col gap-2 ${mockClassName}`)
+        const lists = screen.getAllByRole('list')
+        expect(lists[0]).toHaveClass(`flex flex-col gap-2 ${mockClassName}`)
     })
 })
