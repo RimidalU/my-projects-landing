@@ -5,7 +5,7 @@ import { getGitHabRepositoryUrl } from '@/utils/path.utils'
 
 interface IProjectLinksListProps {
     slug: string
-    liveDemo: string
+    liveDemo?: string
 }
 
 function ProjectLinksList({ slug, liveDemo }: IProjectLinksListProps) {

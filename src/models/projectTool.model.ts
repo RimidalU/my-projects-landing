@@ -38,6 +38,7 @@ enum ProjectTool {
     ReactD3Tree = 'react-d3-tree',
     MonacoEditor = 'MonacoEditor',
     DocxTemplater = 'DocxTemplater',
+    Flutter = 'flutter',
 
     // RTK= 'rtk-query',
     // Axios= 'axios',
