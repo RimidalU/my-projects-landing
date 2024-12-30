@@ -10,6 +10,7 @@ import {
     getProjectInterfaceTourVideoUrl,
 } from '@/utils/path.utils'
 import CustomImage from '@/components/CustomImage'
+import { ProjectTool } from '@/models/projectTool.model'
 
 export const revalidate = 60
 
@@ -47,7 +48,11 @@ export default async function ProjectPage({
                     <CustomImage
                         src={getProjectInterfaceTourVideoUrl(slug)}
                         alt="Description of image"
-                        className="w-full"
+                        className={
+                            tools.includes(ProjectTool.Flutter)
+                                ? 'w-1/3'
+                                : 'w-full'
+                        }
                         width={800}
                         height={600}
                     />
