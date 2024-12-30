@@ -65,7 +65,7 @@ const PROJECTS: IProject[] = [
         description: 'Classic simple React tik tak toe for two users game.',
         slug: 'react-simple-tic-tac-toe',
         liveDemo: 'https://react-simple-tic-tac-toe.netlify.app/',
-        img: ['error.png', 'mobile.png', 'output.png', 'running.png'],
+        img: ['react-simple-tic-tac-toe.png'],
 
         tools: [
             ProjectTool.React,
