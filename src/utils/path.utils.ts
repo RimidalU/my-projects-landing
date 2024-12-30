@@ -6,4 +6,11 @@ const getGitHabRepositoryUrl = (slug: string): string =>
 const getProjectInterfaceTourVideoUrl = (slug: string): string =>
     `/projects/${slug}/demo.webp`
 
-export { getGitHabRepositoryUrl, getProjectInterfaceTourVideoUrl }
+const getProjectImgUrl = (slug: string, imgName: string): string =>
+    `/projects/${slug}/${imgName}`
+
+export {
+    getGitHabRepositoryUrl,
+    getProjectInterfaceTourVideoUrl,
+    getProjectImgUrl,
+}

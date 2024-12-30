@@ -5,7 +5,7 @@ function ProjectTools({ tools }: IProjectToolsProps) {
     return (
         <article>
             <h2>🛠️ Tools Used:</h2>
-            <ul className="flex">
+            <ul className="flex flex-wrap">
                 {tools.map((tool) => (
                     <li key={tool} className="px-2">{`${tool}`}</li>
                 ))}

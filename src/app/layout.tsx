@@ -33,9 +33,9 @@ export default function RootLayout({
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
-                <div className="items-center justify-items-center min-h-screen pb-20 gap-16">
+                <div className="pb-20 gap-16">
                     <Header />
-                    <main className="flex flex-col gap-8 items-center sm:items-start p-16 sm:p-20">
+                    <main className="flex flex-col gap-8 items-center py-14 px-4 sm:p-20">
                         {children}
                     </main>
                     <Footer />

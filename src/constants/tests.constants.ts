@@ -10,6 +10,7 @@ const mockProjectList: IProject[] = [
         tools: [ProjectTool.React, ProjectTool.TypeScript],
         mainTools: [ProjectTool.React],
         status: 'in progress',
+        img: ['1.png'],
     },
     {
         name: 'New Project',
@@ -19,6 +20,7 @@ const mockProjectList: IProject[] = [
         tools: [ProjectTool.Leaflet, ProjectTool.Jest],
         mainTools: [ProjectTool.React],
         status: 'completed',
+        img: ['1.png'],
     },
 ]
 

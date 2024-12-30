@@ -5,8 +5,12 @@ import ProjectLinksList from '@/components/ProjectLinksList'
 import ProjectTools from '@/components/ProjectTools'
 import { StaticPagePropsParams } from '@/models/common.model'
 import { projectsRepository } from '@/repositories/projects.repository'
-import { getProjectInterfaceTourVideoUrl } from '@/utils/path.utils'
+import {
+    getProjectImgUrl,
+    getProjectInterfaceTourVideoUrl,
+} from '@/utils/path.utils'
 import CustomImage from '@/components/CustomImage'
+import { ProjectTool } from '@/models/projectTool.model'
 
 export const revalidate = 60
 
@@ -26,7 +30,7 @@ export default async function ProjectPage({
     const { slug } = await params
     const className = ''
 
-    const { name, description, liveDemo, tools } =
+    const { name, description, liveDemo, tools, img } =
         projectsRepository.getProjectBySlug(slug)
 
     return (
@@ -44,7 +48,11 @@ export default async function ProjectPage({
                     <CustomImage
                         src={getProjectInterfaceTourVideoUrl(slug)}
                         alt="Description of image"
-                        className="w-full"
+                        className={
+                            tools.includes(ProjectTool.Flutter)
+                                ? 'w-1/3'
+                                : 'w-full'
+                        }
                         width={800}
                         height={600}
                     />
@@ -63,7 +71,24 @@ export default async function ProjectPage({
                 </ArticleLayout>
 
                 <ArticleLayout className="col-span-full flex-col">
-                    {'Images'}
+                    <ul
+                        className={clsx(
+                            'flex flex-row flex-wrap gap-2',
+                            className
+                        )}
+                    >
+                        {img.map((item) => (
+                            <li key={item}>
+                                <CustomImage
+                                    src={getProjectImgUrl(slug, item)}
+                                    alt={`${item} of ${name} project`}
+                                    width={400}
+                                    height={400}
+                                    className="w-full"
+                                />
+                            </li>
+                        ))}
+                    </ul>
                 </ArticleLayout>
             </section>
         </>
