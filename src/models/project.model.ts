@@ -6,7 +6,8 @@ interface IProject {
     name: string
     description: string
     slug: string
-    liveDemo: string
+    liveDemo?: string
+    img: string[]
     tools: ProjectTool[]
     mainTools: ProjectTool[]
     status: ProjectStatus
