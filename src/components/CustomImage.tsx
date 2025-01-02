@@ -2,6 +2,9 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
+import { clsx } from 'clsx'
+
+import Spinner from './Spinner'
 
 const DEFAULT_IMG: string = '/projects/default-image.png'
 
@@ -21,16 +24,27 @@ const CustomImage = ({
     className,
 }: CustomImageProps) => {
     const [imageError, setImageError] = useState(false)
+    const [loading, setLoading] = useState(true)
 
     return (
-        <Image
-            src={imageError ? DEFAULT_IMG : src}
-            alt={alt}
-            width={width}
-            height={height}
-            className={className}
-            onError={() => setImageError(true)}
-        />
+        <>
+            {loading && <Spinner />}
+            <Image
+                src={imageError ? DEFAULT_IMG : src}
+                alt={alt}
+                width={width}
+                height={height}
+                className={clsx('w-full', className)}
+                onError={() => {
+                    setImageError(true)
+                    setLoading(false)
+                }}
+                onLoad={() => {
+                    setLoading(false)
+                }}
+                style={{ visibility: loading ? 'hidden' : 'visible' }}
+            />
+        </>
     )
 }
 

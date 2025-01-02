@@ -13,4 +13,5 @@ export {
     getGitHabRepositoryUrl,
     getProjectInterfaceTourVideoUrl,
     getProjectImgUrl,
+    BASE_GITHUB_URL,
 }
