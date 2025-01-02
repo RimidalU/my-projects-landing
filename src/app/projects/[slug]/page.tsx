@@ -10,7 +10,6 @@ import {
     getProjectInterfaceTourVideoUrl,
 } from '@/utils/path.utils'
 import CustomImage from '@/components/CustomImage'
-import { ProjectTool } from '@/models/projectTool.model'
 
 export const revalidate = 60
 
@@ -48,13 +47,13 @@ export default async function ProjectPage({
                     <CustomImage
                         src={getProjectInterfaceTourVideoUrl(slug)}
                         alt="Description of image"
-                        className={
-                            tools.includes(ProjectTool.Flutter)
-                                ? 'w-1/3'
-                                : 'w-full'
-                        }
+                        // className={
+                        //     tools.includes(ProjectTool.Flutter)
+                        //         ? ''
+                        //         : ''
+                        // }
                         width={800}
-                        height={600}
+                        height={200}
                     />
                 </ArticleLayout>
 
@@ -73,12 +72,18 @@ export default async function ProjectPage({
                 <ArticleLayout className="col-span-full flex-col">
                     <ul
                         className={clsx(
-                            'flex flex-row flex-wrap gap-2',
+                            'flex flex-row justify-center flex-wrap gap-2',
                             className
                         )}
                     >
                         {img.map((item) => (
-                            <li key={item}>
+                            <li
+                                key={item}
+                                className={clsx(
+                                    'flex justify-center items-center',
+                                    className
+                                )}
+                            >
                                 <CustomImage
                                     src={getProjectImgUrl(slug, item)}
                                     alt={`${item} of ${name} project`}
